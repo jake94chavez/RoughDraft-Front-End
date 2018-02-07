@@ -1,11 +1,13 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import './MiniPost.css'
+
 
 class MiniPost extends Component {
 	render() {
 		return(
-			<div>
-			<h1>Some Text</h1>
+			<div className="miniPost">
+				<h3><Link to={'/posts/'+ this.props.id}>{this.props.title}</Link></h3>
 			</div>
 			)
 	}
