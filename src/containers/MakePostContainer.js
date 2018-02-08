@@ -20,10 +20,10 @@ class MakePostContainer extends Component {
 			content: self.state.content
 		}
 		PostModel.create(storyPost).then( (res) => {
-			self.setState({
-				title: '',
-				content: ''
 			})
+		self.setState({
+			title: '',
+			content: ''
 		})
 	}
 	onInputChangeTitle(e) {

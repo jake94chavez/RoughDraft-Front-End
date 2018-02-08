@@ -6,12 +6,12 @@ class MiniPostsContainer extends Component {
 	constructor () {
 		super();
 		this.state = {
-			posts: ""
+			posts: ''
 		}
 	}
 	render () {
 		let self = this;
-		if (this.state.posts === "") {
+		if (this.state.posts === '') {
 			PostModel.all().then( (res) => {
 				let posts = res.data.map((post) => {
 					return (
@@ -27,7 +27,7 @@ class MiniPostsContainer extends Component {
 			})
 		}
 		return (
-			<div className = "MiniPostsContainer">
+			<div className = 'MiniPostsContainer'>
 				<h2>Stories that need review</h2>
 				{this.state.posts}
 			</div>
