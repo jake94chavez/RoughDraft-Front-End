@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 // import logo from '../../logo.svg';
 import MiniPostsContainer from '../../containers/MiniPostsContainer';
-import MakePost from '../forms/MakePost'
+import MakePostContainer from '../../containers/MakePostContainer'
 import Header from '../header/Header'
 
 class Home extends Component {
@@ -13,7 +13,7 @@ class Home extends Component {
           A place to get meaningful feedback on your written work.
         </p>
         <MiniPostsContainer />
-        <MakePost />
+        <MakePostContainer />
       </div>
     )
   }

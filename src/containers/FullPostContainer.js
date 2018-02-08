@@ -8,12 +8,12 @@ class FullPostContainer extends Component {
 	constructor () {
 		super();
 		this.state = {
-			post: ""
+			post: ''
 		}
 	}
 	render () {
 		let self = this;
-		if (this.state.post === "") {
+		if (this.state.post === '') {
 			PostModel.getOne(self.props.match.params.id).then( (res) => {
 				let post = res.data;
 				let renderedPost = (
@@ -29,8 +29,8 @@ class FullPostContainer extends Component {
 			})
 		}
 		return (
-			<div className = "FullPostContainer">
-			<Header />
+			<div className = 'FullPostContainer'>
+				<Header />
 				{this.state.post}
 				<hr />
 				<h3>Comments</h3>
