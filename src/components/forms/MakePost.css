@@ -1,0 +1,15 @@
+.MakePostHolder {
+	margin-top: 150px;
+}
+
+.MakePostContent {
+	width: 60%;
+	height: 200px;
+	resize: none;
+	margin-top: 20px;
+}
+
+button {
+	margin-top: 10px;
+	margin-bottom: 40px;
+}

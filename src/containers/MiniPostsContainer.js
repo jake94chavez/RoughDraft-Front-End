@@ -28,7 +28,7 @@ class MiniPostsContainer extends Component {
 		}
 		return (
 			<div className = "MiniPostsContainer">
-				<h1>Posts Container</h1>
+				<h2>Stories that need review</h2>
 				{this.state.posts}
 			</div>
 		)

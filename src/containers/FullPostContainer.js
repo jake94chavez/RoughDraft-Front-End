@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import FullPost from '../components/post/FullPost'
 import PostModel from '../models/Post'
+import CommentsContainer from './CommentsContainer'
+import Header from '../components/header/Header'
 
 class FullPostContainer extends Component {
 	constructor () {
@@ -28,7 +30,13 @@ class FullPostContainer extends Component {
 		}
 		return (
 			<div className = "FullPostContainer">
+			<Header />
 				{this.state.post}
+				<hr />
+				<h3>Comments</h3>
+				<CommentsContainer
+				postId = {self.props.match.params.id} 
+				/>
 			</div>
 		)
 	}
