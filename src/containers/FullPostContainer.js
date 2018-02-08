@@ -2,38 +2,36 @@ import React, { Component } from 'react'
 import FullPost from '../components/post/FullPost'
 import PostModel from '../models/Post'
 
-class FullPostsContainer extends Component {
+class FullPostContainer extends Component {
 	constructor () {
 		super();
 		this.state = {
-			posts: ""
+			post: ""
 		}
 	}
 	render () {
 		let self = this;
-		if (this.state.posts === "") {
-			PostModel.all().then( (res) => {
-				let posts = res.data.map((post) => {
-					return (
-						<MiniPost
+		if (this.state.post === "") {
+			PostModel.getOne(self.props.match.params.id).then( (res) => {
+				let post = res.data;
+				let renderedPost = (
+						<FullPost
 						_id = {post._id}
 						title = {post.title}
+						content = {post.content}
 						/>
 					)
-				})
 				self.setState({
-					posts: posts
+					post: renderedPost
 				})
-				console.log(posts);
 			})
 		}
 		return (
-			<div className = "MiniPostsContainer">
-				<h1>Posts Container</h1>
-				{this.state.posts}
+			<div className = "FullPostContainer">
+				{this.state.post}
 			</div>
 		)
 	}
 }
 
-export default FullPostsContainer;
+export default FullPostContainer;

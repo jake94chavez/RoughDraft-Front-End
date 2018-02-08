@@ -24,7 +24,6 @@ class MiniPostsContainer extends Component {
 				self.setState({
 					posts: posts
 				})
-				console.log(posts);
 			})
 		}
 		return (
