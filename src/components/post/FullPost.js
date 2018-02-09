@@ -12,6 +12,7 @@ class FullPost extends Component {
 				<div className='FullPostContainer'>
 					<h1>{this.props.title}</h1>
 					<div>{newText}</div>
+					<button onClick={this.props.deletePost}/>
 				</div>
 				<div className='FullPostComments'>
 				<Comment />

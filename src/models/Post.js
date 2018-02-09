@@ -15,7 +15,7 @@ class PostModel {
 		return request;
 	}
 	static delete(post) {
-		let url = 'https://roughdraftapi.herokuapp.com/api/posts/' + post._id
+		let url = 'https://roughdraftapi.herokuapp.com/api/posts/' + post.props._id
 		let request = axios.delete(url);
 		return request;
 	}
