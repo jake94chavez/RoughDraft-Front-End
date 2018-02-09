@@ -6,7 +6,8 @@ class MiniPostsContainer extends Component {
 	constructor () {
 		super();
 		this.state = {
-			posts: ''
+			posts: '',
+			count: 0
 		}
 	}
 	render () {
@@ -22,7 +23,8 @@ class MiniPostsContainer extends Component {
 					)
 				})
 				self.setState({
-					posts: posts
+					posts: posts,
+					count: posts.length
 				})
 			})
 		}

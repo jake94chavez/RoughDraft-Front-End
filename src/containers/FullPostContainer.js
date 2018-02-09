@@ -4,6 +4,7 @@ import FullPost from '../components/post/FullPost'
 import PostModel from '../models/Post'
 import CommentsContainer from './CommentsContainer'
 import Header from '../components/header/Header'
+import AddCommentContainer from './AddCommentContainer'
 
 class FullPostContainer extends Component {
 	constructor () {
@@ -56,6 +57,9 @@ class FullPostContainer extends Component {
 				<h3>Comments</h3>
 				<CommentsContainer
 				postId = {self.props.match.params.id} 
+				/>
+				<AddCommentContainer
+				postId = {self.props.match.params.id}
 				/>
 			</div>
 		)

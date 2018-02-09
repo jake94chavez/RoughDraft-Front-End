@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 class CommentModel {
-	static create(post) {
-		let request = axios.post('https://roughdraftapi.herokuapp.com/api/posts', post);
+	static create(postId, comment) {
+		let request = axios.post('https://roughdraftapi.herokuapp.com/api/posts/' + postId + '/comments', comment);
 		return request;
 	}
 	static delete(postId, comment) {
