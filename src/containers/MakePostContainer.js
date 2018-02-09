@@ -13,7 +13,7 @@ class MakePostContainer extends Component {
 		this.onInputChangeTitle = this.onInputChangeTitle.bind(this);
 		this.onInputChangeContent = this.onInputChangeContent.bind(this);
 	}
-	handleSubmit() {
+	handleSubmit(e) {
 		let self = this;
 		let storyPost = {
 			title: self.state.title,
