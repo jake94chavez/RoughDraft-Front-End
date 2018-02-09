@@ -13,18 +13,17 @@ class FullPostContainer extends Component {
 			title: '',
 			redirect: false
 		}
-		this.deletePost = this.deletePost.bind(this);
+		this.handleDeletePost = this.handleDeletePost.bind(this);
 	}
-	deletePost() {
+	handleDeletePost() {
 		let self = this;
-		let confirm = prompt('Deleting a post is irreversible. If you are sure you want to delete this post, type the title of the post.')
-		console.log(this)
+		let confirm = prompt('Deleting a post is irreversible. If you are sure you want to delete this post, type the title of the post. You will be redirected to the home page.')
 		if (confirm === this.state.title) {
 			PostModel.delete(this.state.post).then( (res) => {
 				self.setState({ redirect: true })
 			})
 		}
-	}	
+	}
 	render () {
 		let self = this;
 		if (this.state.redirect) {
@@ -40,7 +39,7 @@ class FullPostContainer extends Component {
 						_id = {post._id}
 						title = {post.title}
 						content = {post.content}
-						deletePost = {self.deletePost}
+						handleDeletePost = {self.handleDeletePost}
 						/>
 					)
 				self.setState({

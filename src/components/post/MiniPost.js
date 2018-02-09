@@ -7,7 +7,7 @@ class MiniPost extends Component {
 	render() {
 		return(
 			<div className="miniPost">
-				<h3><Link to={'/posts/'+ this.props._id}>{this.props.title}</Link></h3>
+				<h3><Link className="plain-link" to={'/posts/'+ this.props._id}>{this.props.title}</Link></h3>
 			</div>
 			)
 	}

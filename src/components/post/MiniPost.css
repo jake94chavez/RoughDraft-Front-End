@@ -1,0 +1,7 @@
+.plain-link {
+	text-decoration: none;
+}
+
+.plain-link:visited {
+	color: blue;
+}
